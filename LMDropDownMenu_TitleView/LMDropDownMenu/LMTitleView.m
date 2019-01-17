@@ -76,7 +76,7 @@
         [_coverView addGestureRecognizer:tap_cover];
         
         // TableView
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 320, 0)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height + 44, [UIScreen mainScreen] .bounds.size.width, 0)];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         [vc.view addSubview:_tableView];
